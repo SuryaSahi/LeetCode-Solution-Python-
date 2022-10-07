@@ -1,0 +1,5 @@
+        a = int(a,2)
+        b = int(b,2)
+        sum = a + b
+        sum = bin(sum)
+        return str(sum.replace("0b",""))
