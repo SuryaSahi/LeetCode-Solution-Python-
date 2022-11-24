@@ -1,0 +1,18 @@
+class Solution:
+    def frequencySort(self, s: str) -> str:
+        sol = []
+        bucket = [[] for i in range(len(s)-1)]
+        
+        #using counter to append items in bucket
+        
+        for i,j in Counter(s).items():
+            bucket[j].append(i)
+        
+        #in reverse order
+        
+        for i in reversed(range(len(bucket))):
+            for j in bucket[i]:
+                sol.append(j*i)
+                
+        return ''.join(sol)        
+    
