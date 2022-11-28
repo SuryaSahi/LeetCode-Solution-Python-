@@ -1,0 +1,11 @@
+ #using Counter
+        count=Counter(nums)
+        res=[]
+        track=0
+        for key,value in count.items():
+            if value ==1:
+                track+=1
+                res.append(key)
+            if track==2:
+                break
+        return res
